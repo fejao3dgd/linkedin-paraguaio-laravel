@@ -1,16 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<x-guest-layout>
 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-
-            <!-- LOGIN -->
-            <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <!-- LOGIN -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
                 
                 <div class="card shadow-sm w-100" style="max-width: 400px;">
                     <div class="card-header bg-primary text-white text-center py-3">
@@ -52,6 +43,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
+
                             </div>
 
                             <!-- FAZER LOGIN -->
@@ -60,11 +52,12 @@
                                     @csrf
                                 <button type="submit" class="btn btn-primary">Fazer Login</button>
                                 <a href={{ route('criarconta') }} class="btn btn-outline-secondary">Criar Conta</a>
+
+                                <a href='{{ route('esq-senha') }}'>Esqueci minha senha</a>
                             </div>
                         </form>
 
                     </div>
                 </div>
-            </div>
-    </body>
-</html>
+         </div>
+</x-guest-layout>

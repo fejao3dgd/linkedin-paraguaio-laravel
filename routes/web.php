@@ -32,3 +32,11 @@ Route::get('logar', function () {
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
 Route::post('/logar', [LoginController::class, 'login'])->name('login.post');
+
+Route::get('esqueci-senha', function(){
+    return view('auth.esqueci-senha');
+})->name('esq-senha');
+
+Route::get('/verificar-token', function(){
+    return view('auth.verificar-token');
+})->name('ver-token');
