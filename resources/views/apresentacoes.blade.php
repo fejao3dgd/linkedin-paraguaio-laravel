@@ -1,26 +1,35 @@
 <x-guest-layout>
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme = "black">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Início
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- NAVBAR -->
+    <nav class="navbar bg-primary navbar-black" data-bs-theme="black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Início</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </button>
+        <!-- NAVEGAÇÃO PARA PÁGINAS -->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href='/'>início</a>
+
+                        <a class="nav-link" href="{{ route('Home') }}">Sobre nós</a>
                     </li>
+
                     <li class="nav-item">
-                    <a class="nav-link" href={{ logar }}>Login</a>
+                        <a class="nav-link" href="{{ route('logar') }}">Login</a>
                     </li>
-                    
-                </ul>
-                </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('apresentacoes') }}">Conecte-se com Profissionais</a>
+                    </li>
+
+                   </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
         
-        <h1>ola meu fi</h1>
+        <h1>ola!</h1>
+        <p>Aqui você poderá conhecer profissionais e escolher os melhores para sua vaga!</p>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </x-guest-layout>
