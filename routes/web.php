@@ -40,3 +40,7 @@ Route::get('esqueci-senha', function(){
 Route::get('/verificar-token', function(){
     return view('auth.verificar-token');
 })->name('ver-token');
+
+Route::get('/apresentacoes', function(){
+    return view('apresentacoes');
+})->name('apresentacoes');
